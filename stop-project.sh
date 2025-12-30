@@ -1,21 +1,23 @@
 #!/bin/bash
-echo "开始停止简易云盘项目所有服务..."
+echo "========== 停止简易云盘项目基础服务 =========="
 
-# 1. 停止Hadoop单机服务（精准停止核心进程，适配无slave环境）
-echo "第一步：停止Hadoop单机集群服务"
-hadoop-daemon.sh stop namenode
-hadoop-daemon.sh stop datanode
-yarn-daemon.sh stop resourcemanager
-yarn-daemon.sh stop nodemanager
-echo "Hadoop单机集群服务已停止"
+# 1. 精准停止Hadoop所有进程（无冗余报错）
+echo "1. 停止HDFS服务"
+hdfs --daemon stop namenode
+hdfs --daemon stop datanode
 
-# 2. 停止MySQL服务（按需启停，可选）
-echo "第二步：停止MySQL服务"
-systemctl stop mysqld
-echo "MySQL服务已停止"
+echo "2. 停止YARN服务"
+yarn --daemon stop resourcemanager
+yarn --daemon stop nodemanager
+echo "✅ Hadoop服务已全部停止"
 
-# 3. 跳过前后端停止（待开发完成后补充）
-echo "第三步：后端服务-待开发完成后执行 kill -9 进程号"
-echo "第四步：前端服务-待开发完成后执行 kill -9 进程号"
+# 2. 停止MySQL服务
+echo "3. 停止MySQL服务"
+systemctl stop mysqld &>/dev/null
+echo "✅ MySQL服务已停止"
 
-echo "简易云盘项目所有服务停止完成！"
+# 3. 待开发模块标注
+echo "4. 后端服务：开发完成后执行 kill -9 进程号"
+echo "5. 前端服务：开发完成后执行 kill -9 进程号"
+
+echo "========== 所有服务停止完成 ✅ =========="

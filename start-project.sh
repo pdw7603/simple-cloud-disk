@@ -1,29 +1,30 @@
 #!/bin/bash
-echo "开始启动简易云盘项目所有服务..."
+echo "========== 启动简易云盘项目基础服务 =========="
 
-# 1. 启动Hadoop单机服务（适配无slave节点环境，跳过从节点报错）
-echo "第一步：启动Hadoop单机集群服务"
-hadoop-daemon.sh start namenode
-hadoop-daemon.sh start datanode
-yarn-daemon.sh start resourcemanager
-yarn-daemon.sh start nodemanager
-sleep 5
-jps | grep -E 'NameNode|DataNode|ResourceManager|NodeManager' && echo "Hadoop单机集群启动成功" || echo "Hadoop核心进程已启动"
+# 1. 启动Hadoop核心进程（新版无告警命令，单机专用）
+echo "1. 启动HDFS核心服务"
+hdfs --daemon start namenode
+hdfs --daemon start datanode
+sleep 3
 
-# 2. 检查并启动MySQL服务
-echo "第二步：检查并启动MySQL服务"
-systemctl status mysqld &>/dev/null || systemctl start mysqld
-mysql --version &>/dev/null && echo "MySQL服务运行正常" || echo "MySQL服务启动失败"
+echo "2. 启动YARN核心服务"
+yarn --daemon start resourcemanager
+yarn --daemon start nodemanager
+sleep 3
+jps | grep -E 'NameNode|DataNode|ResourceManager|NodeManager' && echo "✅ Hadoop服务启动成功"
 
-# 3. 初始化HDFS项目目录（必做，避免成员B开发时报权限/目录不存在错误）
-echo "第三步：初始化HDFS文件存储目录"
-hdfs dfs -test -d /cloud_disk/upload || hdfs dfs -mkdir -p /cloud_disk/upload
-hdfs dfs -chmod 777 /cloud_disk/upload
-echo "HDFS目录 /cloud_disk/upload 权限配置完成"
+# 2. 检查MySQL服务（确保运行）
+echo "3. 检查MySQL服务状态"
+systemctl start mysqld &>/dev/null
+mysql --version &>/dev/null && echo "✅ MySQL服务运行正常"
 
-# 4. 跳过前后端启动（待成员A/B/C开发完成后补充，当前标注待开发）
-echo "第四步：后端服务-待成员A开发完成后部署（cloud-disk.jar）"
-echo "第五步：前端服务-待成员C开发完成后部署（npm run dev）"
+# 3. 目录已永久创建，无需重复执行（仅验证）
+echo "4. 验证项目存储目录"
+hdfs dfs -test -d /cloud_disk/upload && echo "✅ HDFS目录 /cloud_disk/upload 可用"
 
-echo "简易云盘项目基础服务启动完成！"
-echo "基础环境就绪，等待成员A/B/C模块开发后，补充启动前后端服务"
+# 4. 待开发模块标注
+echo "5. 后端服务：待成员A开发后部署 cloud-disk.jar"
+echo "6. 前端服务：待成员C开发后部署 npm run dev"
+
+echo "========== 基础服务启动完成 ✅ =========="
+echo "环境就绪，等待其他成员模块开发"

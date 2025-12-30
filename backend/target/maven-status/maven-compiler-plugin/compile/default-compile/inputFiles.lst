@@ -1,0 +1,4 @@
+/root/simple-cloud-disk/backend/src/main/java/com/example/clouddisk/entity/FileMetadata.java
+/root/simple-cloud-disk/backend/src/main/java/com/example/clouddisk/controller/FileController.java
+/root/simple-cloud-disk/backend/src/main/java/com/example/clouddisk/util/HdfsUtil.java
+/root/simple-cloud-disk/backend/src/main/java/com/example/clouddisk/mapper/FileMetadataMapper.java

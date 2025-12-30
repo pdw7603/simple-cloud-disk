@@ -1,0 +1,6 @@
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/cloud/disk/entity/User.java
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/cloud/disk/service/UserService.java
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/cloud/disk/mapper/UserMapper.java
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/App.java
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/cloud/disk/CloudDiskUserAuthApplication.java
+/root/simple-cloud-disk/backend/cloud-disk-user-auth/src/main/java/com/pdw7603/cloud/disk/controller/UserController.java

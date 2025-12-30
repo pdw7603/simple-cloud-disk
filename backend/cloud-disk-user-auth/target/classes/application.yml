@@ -1,0 +1,24 @@
+# 服务器端口配置（默认8080，可自定义）
+server:
+  port: 8080
+
+
+# Spring核心配置
+spring:
+  # 数据库连接配置（适配MySQL5.7，已创建cloud_disk数据库）
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_disk?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456 # 务必替换为你的MySQL root实际密码！
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # SpringBoot Web配置
+  web:
+    application-name: cloud-disk-user-auth
+
+
+#MyBatis配置（若使用MyBatis/MyBatis-Plus保留；不使用可删除）
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.pdw7603.cloud.disk.entity
+  configuration:
+    map-underscore-to-camel-case: true # 开启下划线转驼峰命名

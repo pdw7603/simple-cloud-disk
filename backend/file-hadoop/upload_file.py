@@ -8,7 +8,7 @@ import os
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '',
+    'password': '123456',
     'database': 'cloud_disk',
     'charset': 'utf8mb4'
 }
@@ -85,6 +85,6 @@ def upload_file(file_path, user_id=1):
 # 测试上传（可替换为你的本地测试文件路径）
 if __name__ == "__main__":
     # 示例：上传服务器上的/test.txt文件（可先创建该文件：echo "test" > /test.txt）
-    test_file_path = "/test_download.txt"
+    test_file_path = "/root/simple-cloud-disk/backend/file-hadoop/test_file.txt"
     result = upload_file(test_file_path)
     print(result)

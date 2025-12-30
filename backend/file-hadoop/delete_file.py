@@ -5,7 +5,7 @@ import os
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '',
+    'password': '123456',
     'database': 'cloud_disk',
     'charset': 'utf8mb4'
 }

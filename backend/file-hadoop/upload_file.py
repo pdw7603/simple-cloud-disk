@@ -8,7 +8,7 @@ import os
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '123456',
+    'password': '',
     'database': 'cloud_disk',
     'charset': 'utf8mb4'
 }
@@ -57,7 +57,7 @@ def upload_file(file_path, user_id=1):
         conn = get_db_connection()
         cursor = conn.cursor()
         sql = """
-            INSERT INTO file_info (file_name, file_path, file_size, file_type, user_id)
+            INSERT INTO file_metadata (file_name, file_path, file_size, file_type, user_id)
             VALUES (%s, %s, %s, %s, %s)
         """
         cursor.execute(sql, (original_name, target_file_path, file_size, file_type, user_id))

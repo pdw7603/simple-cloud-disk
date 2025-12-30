@@ -1,24 +1,12 @@
-<property>
-    <name>fs.defaultFS</name>
-    <value>hdfs://hadoop01:8020</value>
-</property>
 <configuration>
-    <!-- 指定 HDFS 默认文件系统，端口 9000 适配 Hadoop 3.3.6 -->
+    <!-- 指定 HDFS 默认文件系统 -->
     <property>
         <name>fs.defaultFS</name>
         <value>hdfs://localhost:9000</value>
     </property>
-    <!-- Hadoop 临时目录，与安装路径对应，避免权限问题 -->
+    <!-- Hadoop 临时目录 -->
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>/export/servers/hadoop/temp</value>
+        <value>/export/servers/hadoop/tmp</value>
     </property>
 </configuration>
-<property>
-    <name>fs.defaultFS</name>
-    <value>hdfs://localhost:9000</value>
-</property>
-<property>
-    <name>hadoop.tmp.dir</name>
-    <value>/export/servers/hadoop/tmp</value>
-</property>

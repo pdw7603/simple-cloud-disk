@@ -4,7 +4,7 @@ import pymysql
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '123456',
+    'password': '',
     'database': 'cloud_disk',
     'charset': 'utf8mb4'
 }
@@ -19,7 +19,7 @@ def query_user_files(user_id=1):
         cursor = conn.cursor(pymysql.cursors.DictCursor)  # 返回字典格式数据
         sql = """
             SELECT id, file_name, file_path, file_size, file_type, create_time
-            FROM file_info
+            FROM file_metadata
             WHERE user_id=%s AND is_delete=0
             ORDER BY create_time DESC
         """

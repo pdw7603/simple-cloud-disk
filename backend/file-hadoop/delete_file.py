@@ -5,7 +5,7 @@ import os
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '123456',
+    'password': '',
     'database': 'cloud_disk',
     'charset': 'utf8mb4'
 }
@@ -32,7 +32,7 @@ def delete_file(file_id):
         file_path = file_data['file_path']
 
         # 2. 逻辑删除（核心：更新is_delete=1）
-        update_sql = "UPDATE file_info SET is_delete=1, update_time=NOW() WHERE id=%s"
+        update_sql = "UPDATE file_metadata SET is_delete=1, update_time=NOW() WHERE id=%s"
         cursor.execute(update_sql, (file_id,))
         conn.commit()
 

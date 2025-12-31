@@ -1,0 +1,28 @@
+# SpringBoot 基础配置
+# server:
+#   port: 8080 # 后端服务端口
+#
+#   # 数据库配置（对接 member A 创建的 cloud_disk 库）
+#   spring:
+#     datasource:
+#         url: jdbc:mysql://localhost:3306/cloud_disk?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+#             username: root
+#                 password: 123456 # 替换为你的 MySQL 密码
+#                     driver-class-name: com.mysql.cj.jdbc.Driver
+#                       servlet:
+#                           multipart:
+#                                 max-file-size: 100MB # 支持最大上传文件大小
+#                                       max-request-size: 100MB
+#
+#                                       # MyBatis-Plus 配置（若使用 MyBatis，可替换为 MyBatis 配置）
+#                                       mybatis-plus:
+#                                         mapper-locations: classpath:mapper/*.xml # Mapper XML 文件路径
+#                                           type-aliases-package: com.example.cloud disk.entity # 实体类包路径
+#                                             configuration:
+#                                                 map-underscore-to-camel-case: true # 下划线转驼峰命名
+#                                                     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印 SQL 日志
+#
+#                                                     # Hadoop 配置（核心，后续工具类会读取该配置）
+#                                                     hadoop:
+#                                                       config-path: /export/servers/hadoop/etc/hadoop # Hadoop 配置文件目录
+#                                                         hdfs-path: hdfs://hadoop1:9000/cloud-disk # HDFS 云盘根目录

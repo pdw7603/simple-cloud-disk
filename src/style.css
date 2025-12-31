@@ -1,0 +1,169 @@
+/* 全局样式重置（成员C开发） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+#app {
+  height: 100%;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 常用工具类 */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.ml-10 { margin-left: 10px; }
+.ml-20 { margin-left: 20px; }
+.mr-10 { margin-right: 10px; }
+.mr-20 { margin-right: 20px; }
+.p-20 { padding: 20px; }
+.p-30 { padding: 30px; }
+
+/* 过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 卡片阴影优化 */
+.el-card {
+  transition: box-shadow 0.3s ease;
+}
+
+.el-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 按钮样式优化 */
+.el-button {
+  transition: all 0.3s ease;
+}
+
+/* 表格样式优化 */
+.el-table {
+  font-size: 14px;
+}
+
+.el-table th {
+  background-color: #f8f9fa !important;
+  font-weight: 600;
+  color: #333;
+}
+
+.el-table tr:hover {
+  background-color: #f5f7fa !important;
+}
+
+/* 表单样式优化 */
+.el-form-item__label {
+  font-weight: 500;
+}
+
+.el-input__inner,
+.el-textarea__inner {
+  transition: border-color 0.3s ease;
+}
+
+/* 消息提示优化 */
+.el-message {
+  min-width: 200px !important;
+  max-width: 400px !important;
+}
+
+/* 弹窗优化 */
+.el-dialog {
+  border-radius: 8px;
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+/* 菜单样式优化 */
+.el-menu {
+  border-right: none !important;
+}
+
+.el-menu-item.is-active {
+  background-color: #ecf5ff !important;
+  color: #409EFF !important;
+}
+
+/* 响应式断点 */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  .el-message-box {
+    width: 90% !important;
+    max-width: 90% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white !important;
+  }
+}

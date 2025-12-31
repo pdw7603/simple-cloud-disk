@@ -1,0 +1,27 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2025-12-31 00:15:53.585  INFO 24445 --- [           main] c.p.c.disk.CloudDiskUserAuthApplication  : Starting CloudDiskUserAuthApplication v1.0-SNAPSHOT using Java 1.8.0_461 on master with PID 24445 (/root/simple-cloud-disk/backend/cloud-disk-user-auth/01_用户认证模块-成员A/target/cloud-disk-user-auth-1.0-SNAPSHOT.jar started by root in /root/simple-cloud-disk/backend/cloud-disk-user-auth/01_用户认证模块-成员A)
+2025-12-31 00:15:53.586  INFO 24445 --- [           main] c.p.c.disk.CloudDiskUserAuthApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-31 00:15:54.811  INFO 24445 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-31 00:15:54.841  INFO 24445 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-31 00:15:54.841  INFO 24445 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-31 00:15:55.066  INFO 24445 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-31 00:15:55.066  INFO 24445 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1433 ms
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2025-12-31 00:15:56.099  INFO 24445 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-31 00:15:56.117  INFO 24445 --- [           main] c.p.c.disk.CloudDiskUserAuthApplication  : Started CloudDiskUserAuthApplication in 3.075 seconds (JVM running for 3.51)
+用户认证模块服务启动成功！端口：8080
+2025-12-31 00:16:26.105  INFO 24445 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31 00:16:26.105  INFO 24445 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-31 00:16:26.116  INFO 24445 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2025-12-31 00:16:26.219  INFO 24445 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-31 00:16:26.221  WARN 24445 --- [nio-8080-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2025-12-31 00:16:26.485  INFO 24445 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

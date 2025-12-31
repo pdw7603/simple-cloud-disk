@@ -1,0 +1,25 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2025-12-30 23:36:36.611  INFO 21907 --- [           main] c.p.c.disk.CloudDiskUserAuthApplication  : Starting CloudDiskUserAuthApplication v1.0-SNAPSHOT using Java 1.8.0_461 on master with PID 21907 (/root/simple-cloud-disk/backend/cloud-disk-user-auth/01_用户认证模块-成员A/target/cloud-disk-user-auth-1.0-SNAPSHOT.jar started by root in /root/simple-cloud-disk/backend/cloud-disk-user-auth/01_用户认证模块-成员A)
+2025-12-30 23:36:36.613  INFO 21907 --- [           main] c.p.c.disk.CloudDiskUserAuthApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-30 23:36:38.249  INFO 21907 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-30 23:36:38.295  INFO 21907 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-30 23:36:38.296  INFO 21907 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-12-30 23:36:38.623  INFO 21907 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-30 23:36:38.623  INFO 21907 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1954 ms
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+2025-12-30 23:36:39.780  WARN 21907 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2025-12025-12-30 23:36:59.905  INFO 16867 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-30 23:36:59.906  INFO 16867 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-30 23:36:59.907  INFO 16867 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-30 23:37:00.044  INFO 16867 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-30 23:37:00.066  WARN 16867 --- [nio-8080-exec-1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2025-12-30 23:37:00.363  INFO 16867 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
